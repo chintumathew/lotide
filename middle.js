@@ -42,10 +42,10 @@ const middle = function (arrayValues) {
   if (arrayValues.length === 1 || arrayValues.length === 2) {
     return resultArray;
     //odd numbered array
-  } else if (arrayValues.length % 2 === 1) {
+  } if (arrayValues.length % 2 === 1) {
     resultArray.push(arrayValues[Math.floor(arrayValues.length / 2)]);
   }// even numbered array  
-  else {
+  if (arrayValues.length % 2 === 0) {
     resultArray.push(arrayValues[(arrayValues.length / 2 ) - 1]);
     resultArray.push(arrayValues[arrayValues.length / 2]);
   }

@@ -48,3 +48,5 @@ console.log(results1);
 assertArraysEquals(results1 , [ 'g', 'c', 't', 'm', 't' ]);
 assertArraysEquals(results1 , []);
 console.log(eqArrays(results1 , []));
+
+module.exports = map;

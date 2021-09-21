@@ -41,3 +41,5 @@ console.log(findKeyValue);
 assertEqual(findKeyValue , "noma");
 assertEqual(findKeyValue , "Blue Hill");
 assertEqual(findKeyValue , "Ora");
+
+module.exports = findKey;

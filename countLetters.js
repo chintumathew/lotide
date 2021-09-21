@@ -53,3 +53,5 @@ const expectedResult = {
 };
 
 console.log("Expected Result : " ,expectedResult);
+
+module.exports = countLetters;

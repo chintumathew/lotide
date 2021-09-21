@@ -66,3 +66,5 @@ const expected = {
 //test assertions
 assertArraysEquals(letterPositions("hello").e, [1]);
 assertArraysEquals(letterPositions("hello").l, [2]);
+
+module.exports = letterPositions;

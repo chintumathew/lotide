@@ -1,22 +1,29 @@
+const assert = require('chai').assert;
 const eqArrays = require('../eqArrays');
 const middle = require('../middle');
-const assertArraysEquals = require('../assertArraysEqual');
 
 
 //Test Cases
-console.log(middle([1])); // => []
-console.log(middle([1, 2])); // => []
-console.log(middle([1, 2, 3])); // => [2]
-console.log(middle([1, 2, 3, 4, 5])); // => [3]
-console.log(middle([1, 2, 3, 4])); // => [2, 3]
-console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
 
+describe('#middle' , () => {
+  it("returns ['Lighthouse'] for ['Lighthouse', 'Labs']" , () => {
+    assert.deepEqual(middle(["Hello", "Lighthouse", "Labs"]), [ 'Lighthouse']);
+  });
 
-//Test assertions
+  it("returns [3, 4] for [1, 2, 3, 4, 5, 6]" , () => {
+    assert.deepEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
+  });
 
-console.log("---------Assertions------");
-assertArraysEquals(middle([1,2,3,4,5]) , [3]);
-assertArraysEquals(middle([1,2,3,4,5,6]) , [3,4]);
+  it("returns [2, 3] for [1, 2, 3, 4]" , () => {
+    assert.deepEqual(middle([1, 2, 3, 4]), [ 2, 3]);
+  });
 
-console.log("---------Checking Both Array Values are Same------");
-console.log(eqArrays(middle([1,2,3,4,5]) , [3]));
+  it("returns [] for [1] " , () => {
+    assert.deepEqual(middle([1]), []);
+  });
+
+  it("returns [] for [1, 2] " , () => {
+    assert.deepEqual(middle([1, 2]), []);
+  });
+
+});
